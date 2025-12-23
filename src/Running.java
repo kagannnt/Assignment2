@@ -1,4 +1,13 @@
-package PACKAGE_NAME;
+public class Running extends Activity {
+    private double speed;
 
-public class Running {
+    public Running(int duration, double speed) {
+        super("Running", duration);
+        this.speed = speed;
+    }
+
+    @Override
+    public double calculateCalories() {
+        return getDuration() * speed * 0.8;
+    }
 }
